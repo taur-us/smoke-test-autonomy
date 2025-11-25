@@ -1,0 +1,52 @@
+{
+  "backlog": [
+    {
+      "id": "SMOKE-001",
+      "title": "Create a hello.py with greet function",
+      "description": "Create a simple hello.py file with a greet() function that returns 'Hello, World!' by default and 'Hello, {name}!' when given a name parameter.",
+      "priority": "HIGH",
+      "dependencies": [],
+      "estimated_hours": 0.25,
+      "assigned_to": null,
+      "model": "sonnet",
+      "status": "READY",
+      "acceptance_criteria": [
+        "hello.py exists in project root",
+        "greet() function returns 'Hello, World!' when called without arguments",
+        "greet('Claude') returns 'Hello, Claude!'"
+      ],
+      "affects_files": [
+        "hello.py"
+      ],
+      "context": {
+        "notes": "Simple smoke test task"
+      }
+    },
+    {
+      "id": "SMOKE-002",
+      "title": "Add tests for hello.py",
+      "description": "Create test_hello.py with pytest tests for the greet() function from SMOKE-001.",
+      "priority": "HIGH",
+      "dependencies": ["SMOKE-001"],
+      "estimated_hours": 0.25,
+      "assigned_to": null,
+      "model": "sonnet",
+      "status": "READY",
+      "acceptance_criteria": [
+        "test_hello.py exists",
+        "Tests cover default greeting",
+        "Tests cover named greeting",
+        "All tests pass"
+      ],
+      "affects_files": [
+        "test_hello.py"
+      ],
+      "context": {
+        "notes": "Simple smoke test task - depends on SMOKE-001"
+      }
+    }
+  ],
+  "in_progress": [],
+  "completed": [],
+  "failed": []
+}
